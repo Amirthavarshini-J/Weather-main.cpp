@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int temp;
+    char climate;
+
+    cout << "Enter the temperature: ";
+    cin >> temp;
+
+    cout << "Enter the climate (S for Sunny, R for Rainy, C for Cloudy): ";
+    cin >> climate;
+
+    if (temp < 0) {
+        cout << "It's freezing outside! ";
+    } else if (temp < 15) {
+        cout << "It's cold outside. ";
+    } else if (temp < 25) {
+        cout << "It's pleasant outside. ";
+    } else {
+        cout << "It's hot outside. ";
+    }
+
+    switch(climate) {
+        case 'S':
+        case 's':
+            cout << "The sky is clear. Enjoy the sun!" << endl;
+            break;
+        case 'R':
+        case 'r':
+            cout << "It's raining outside. Don't forget your umbrella!" << endl;
+            break;
+        case 'C':
+        case 'c':
+            cout << "It's cloudy outside. Bring a light jacket." << endl;
+            break;
+        default:
+            cout << "Sorry, invalid climate entered." << endl;
+            break;
+    }
+
+    cout << "The temperature is " << temp << " degrees Celsius." << endl;
+    cout << "The climate is " << climate << "." << endl;
+
+    return 0;
+}
